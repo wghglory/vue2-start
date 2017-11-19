@@ -9,7 +9,7 @@ Vue.component('app-message', Message);
 
 Vue.use(VueRouter);
 
-const routes = [{ path: '/users', component: Users }, { path: '/', component: Message }];
+const routes = [{ path: '/users/:teamId', component: Users }, { path: '/', component: Message }];
 
 const router = new VueRouter({
   routes,
