@@ -12,6 +12,10 @@
     <h3>List todos</h3>
     <ul>
       <li v-for="(todo,i) in todos" v-bind:key="i">
+        <label v-for="(val,key) in todo" :key="key"> <!-- 遍历 obj，在不确定属性时候用 -->
+          {{key}} - {{val}}
+        </label>
+        <br>
         <input type="checkbox" :value="todo.completed" @click="todo.completed = !todo.completed">
         <span :class="{completed: todo.completed}">{{todo.title | toUpper}}</span>
         <button @click="deleteTodo(todo)">x</button>
