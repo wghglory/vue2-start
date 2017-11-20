@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <h1>Below is rendered by router. `yarn add vue-router`</h1>
+    <h1>Below is rendered by router. `yarn add vue-router vue-resource`</h1>
     <hr>
     <router-link to="/">Message</router-link>
+    <router-link to="/todos">Todos</router-link>
     <router-link to="/users/10">User 10</router-link>
     <router-link to="/users/12">User 12</router-link>
     <hr>
