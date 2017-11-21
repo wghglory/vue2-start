@@ -4,7 +4,8 @@
     <hr>
     <h3>Add new todo</h3>
     <form>
-      <label>Todo title: </label><input type="text" v-model="newTodo.title">
+      <label>Todo title: </label>
+      <input type="text" v-model="newTodo.title">
       <p>New todo: {{detail}}</p>
       <input type="submit" value="Submit" @click="addNewTodo">
     </form>
@@ -12,7 +13,8 @@
     <h3>List todos</h3>
     <ul>
       <li v-for="(todo,i) in todos" v-bind:key="i">
-        <label v-for="(val,key) in todo" :key="key"> <!-- 遍历 obj，在不确定属性时候用 -->
+        <label v-for="(val,key) in todo" :key="key">
+          <!-- 遍历 obj，在不确定属性时候用 -->
           {{key}} - {{val}}
         </label>
         <br>
@@ -29,8 +31,7 @@
     data() {
       return {
         newTodo: {},
-        todos: [
-          {
+        todos: [{
             "userId": 1,
             "id": 1,
             "title": "delectus aut autem",
@@ -76,15 +77,17 @@
       }
     },
     created() {
-      return this.$http.get('http://jsonplaceholder.typicode.com/todos').then(res=>{
+      return this.$http.get('http://jsonplaceholder.typicode.com/todos').then(res => {
         this.todos = res.data.slice(0, 10);
       })
     }
   }
+
 </script>
 
 <style scoped>
-.completed {
-  text-decoration: line-through;
-}
+  .completed {
+    text-decoration: line-through;
+  }
+
 </style>

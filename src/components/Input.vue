@@ -9,22 +9,26 @@
 </template>
 
 <script>
-export default {
-  props: ['msg'],
-  // props: {
-  //   'msg': {
-  //     type: String,
-  //     default: 'default message'
-  //   }
-  // },
-  data() {
-    return {message : ''}
-  },
-  methods: {
-    changeMessage(event){
-      this.message = event.target.value;
-      this.$emit('messageChanged', this.message)
+  export default {
+    props: ['msg'],
+    // props: {
+    //   'msg': {
+    //     type: String,
+    //     default: 'default message',
+    //     required: true
+    //   }
+    // },
+    data() {
+      return {
+        message: ''
+      }
+    },
+    methods: {
+      changeMessage(event) {
+        this.message = event.target.value;
+        this.$emit('messageChanged', this.message)
+      }
     }
   }
-}
+
 </script>

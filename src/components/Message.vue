@@ -9,28 +9,30 @@
 </template>
 
 <script>
-// local component
-import Input from './Input.vue'
+  // local component
+  import Input from './Input.vue'
 
-export default {
-  data() {
-    return {
-      message: 'this is the initial message'
-    }
-  },
-  components: {
-    'app-input': Input
-  },
-  methods: {
-    updateParentFromChild($event){
-      this.message = $event
+  export default {
+    data() {
+      return {
+        message: 'this is the initial message'
+      }
+    },
+    components: {
+      'app-input': Input
+    },
+    methods: {
+      updateParentFromChild($event) {
+        this.message = $event
+      }
     }
   }
-}
+
 </script>
 
 <style>
-[v-cloak] {
-  display: none;
-}
+  [v-cloak] {
+    display: none;
+  }
+
 </style>

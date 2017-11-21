@@ -1,30 +1,29 @@
 <template>
   <div id="app">
-    <h1>Below is rendered by router. `yarn add vue-router vue-resource`</h1>
-    <hr>
-    <router-link to="/">Message</router-link>
-    <router-link to="/todos">Todos</router-link>
-    <router-link to="/users/10">User 10</router-link>
-    <router-link to="/users/12">User 12</router-link>
-    <hr>
-    <router-view></router-view><!-- place to put the routing component -->
-    <!-- <app-message></app-message> -->
+    <app-header></app-header>
+    <router-view></router-view>
+    <!-- place to put the routing component -->
   </div>
 </template>
 
 <script>
-// import Message from './Message.vue'
+  import Header from './components/Header.vue';
 
-export default {
-  data () {
-    return {
+  export default {
+    data() {
+      return {}
+    },
+    components: {
+      'app-header': Header
     }
-  },
-  // components: {
-  //   'app-message': Message
-  // }
-}
+  }
+
 </script>
 
 <style>
+  body {
+    margin: 0;
+    font-family: 'Nunito SemiBold';
+  }
+
 </style>
