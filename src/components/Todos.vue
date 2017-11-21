@@ -77,7 +77,7 @@
       }
     },
     created() {
-      return this.$http.get('http://jsonplaceholder.typicode.com/todos').then(res => {
+      return this.$http.get('https://jsonplaceholder.typicode.com/todos').then(res => {
         this.todos = res.data.slice(0, 10);
       })
     }
