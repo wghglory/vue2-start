@@ -14,6 +14,9 @@
         <router-link to="/todos">Todos</router-link>
       </li>
       <li>
+        <router-link to="/products">Products</router-link>
+      </li>
+      <li>
         <router-link to="/users/10">User 10</router-link>
       </li>
       <li>
@@ -24,8 +27,7 @@
 </template>
 
 <script>
-  export default {}
-
+export default {};
 </script>
 
 <style scoped>
